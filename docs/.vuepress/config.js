@@ -1,21 +1,31 @@
 module.exports = {
   title: 'SOMEONE\'s blog',
   description: 'someone\'s blog',
-  theme: 'reco',
+  theme: 'vdoing',
   themeConfig: {
     logo: '/img/blog.png',
     subSidebar: 'auto',
     nav: [
-      { text: 'Home', link: '/' },
       {
-        text: 'live',
-        ariaLabel: 'live label',
+        text: 'Home',
+        link: '/',
+        ariaLabel: 'welcome to my home',
         items: [
-          { text: 'test', link: '/pages/blog/README.md' },
-          // { text: 'test2', link: '/pages/blog/README.md' }
+          { text: 'welcome', link: '/welcome/welcome.md' }
         ]
       },
-      { text: 'GitHub', link: 'https://github.com/dutny/somebodyelse-blog' },
+      {
+        text: 'index',
+        ariaLabel: 'welcome to my home',
+        items: [
+          { text: 'index', link: '/handbook/ConditionalTypes.md' },
+        ]
+      },
+      {
+        text: 'GitHub',
+        ariaLabel: 'welcome to my home',
+        link: 'https://github.com/dutny/somebodyelse-blog'
+      },
     ],
     sidebar: [
       {
@@ -25,25 +35,21 @@ module.exports = {
         children: [
           {
             title: '学前必读',
-            path: '/'
-          }
-        ]
-      },
-      {
-        title: '基础学习',
-        path: '/handbook/ConditionalTypes',
-        collapsable: false,
-        children: [
-          {
-            title: '条件类型',
-            path: '/handbook/ConditionalTypes'
-          }, {
-            title: '泛型',
-            path: '/handbook/Generics'
+            path: '/welcome/welcome'
           }
         ]
       }
-    ]
+    ],
+    footer: {
+      createYear: '2021',
+      copyrightInfo: '粤ICP备2022020342号-1'
+    },
+    // 博主信息，显示在首页侧边栏
+    blogger: {
+      avatar: 'https://cdn.jsdelivr.net/gh/xugaoyi/image_store/blog/20200103123203.jpg',
+      name: 'Social',
+      slogan: '前端菜鸡一枚',
+    },
   },
   locales: {
     '/': {
